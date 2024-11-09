@@ -1,15 +1,18 @@
-const shareButtons = document.querySelectorAll('.tile-share-button')
+const shareButtons = document.querySelectorAll('.tile-share-button');
 
 async function copyText(e) {
-// prevent button going to the side
-    e.preventDefault()
-    const link = this.getAttribute('link')
+    // prevent button from navigating away (if it was a link or form)
+    e.preventDefault();
+    
+    // Get the link attribute from the clicked button
+    const link = this.getAttribute('link');
+
     try {
-        await navigator.clipboard.writeText(link)
-        alert("Copied the text: " + link)
+        // Open the link in a new tab
+        window.open(link, '_blank');  // '_blank' ensures it opens in a new tab
     } catch (err) {
-        console.error(err)
+        console.error(err);
     }
 }
 
-shareButtons.forEach(shareButton => shareButton.addEventListener('click', copyText))
+shareButtons.forEach(shareButton => shareButton.addEventListener('click', copyText));
