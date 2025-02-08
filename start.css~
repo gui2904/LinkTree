@@ -1,6 +1,7 @@
 html {
     height: 100vh;
 }
+
 body {
     background-color: rgb(10, 10, 10);
     color: white;
@@ -24,26 +25,4 @@ pre {
 }
 p {
     text-align: center;
-}
-
-@media (max-width: 700px) {
-    p {
-	font-size: 2em;
-	margin-top: 64px;
-	margin-bottom: 0;
-    }
-    pre {
-	font-size: 1.5em;
-    }
-}
-
-@media (max-width: 1300px) {
-    p {
-	font-size: 4em;
-	margin-top: 64px;
-	margin-bottom: 0;
-    }
-    pre {
-	font-size: 2em;
-    }
 }

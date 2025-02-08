@@ -88,10 +88,16 @@ a {
     width: 136px;
     border-radius: 70px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
 }
 
 .image-container img {
-    height: 100%;
+    height: auto;
+    object-position: cover;
+    width: 100%;
 }
 
 .icon {
